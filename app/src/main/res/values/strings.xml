@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tourio</string>
+    <string name="place_of_the_day">Place of the Day</string>
+    <string name="attractions">Attractions</string>
+    <string name="museums">Museums</string>
+    <string name="food">Food</string>
+</resources>
