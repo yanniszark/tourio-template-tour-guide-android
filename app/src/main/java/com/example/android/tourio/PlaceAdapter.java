@@ -53,7 +53,7 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
         /* Set the place's rating */
         TextView placeRating = (TextView) convertView.findViewById(R.id.list_item_rating);
         Float rating = currentPlace.getRating();
-        placeRating.setText(String.format("%.2f", rating));
+        placeRating.setText(String.format("%.1f", rating));
 
         /* Modify rating background color according to rating value */
         if (rating < 5)

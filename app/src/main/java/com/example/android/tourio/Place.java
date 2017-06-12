@@ -33,7 +33,10 @@ public class Place {
 
     /** Constructor for the Place Object */
     public Place(@NonNull String name, int imageResourceId, @NonNull String category, Float rating, int visits,
-                      String description, double longitude, double latitude) {
+                      String description, double latitude, double longitude) throws Exception {
+
+        if ((rating < 0) || (rating > 10))
+            throw new Exception("Rating value must be between 0 and 10");
 
         mName = name;
         mImageResourceId = imageResourceId;

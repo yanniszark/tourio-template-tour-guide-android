@@ -25,6 +25,7 @@
             android:layout_weight="1"
             android:textStyle="bold"
             android:gravity="center"
+            android:textColor="@color/primary_text"
             tools:text="My List Item" />
 
         <LinearLayout
@@ -46,13 +47,14 @@
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:paddingRight="8dp"
-                    android:src="@drawable/icon_number_of_visits" />
+                    android:src="@drawable/ic_visit_count" />
 
                 <TextView
                     android:id="@+id/list_item_visits"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:textColor="@color/secondary_text"
                     tools:text="20125" />
 
 

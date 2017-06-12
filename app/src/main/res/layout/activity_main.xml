@@ -4,66 +4,79 @@
     xmlns:util="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_menu_background"
     android:orientation="vertical"
     tools:context="com.example.android.tourio.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:src="@drawable/main_menu_logo" />
 
     <com.example.android.tourio.SquareGridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:layout_margin="@dimen/menu_button_margin"
         util:size="2">
 
         <FrameLayout
             android:id="@+id/imageview_main_menu_place_of_the_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher">
+            android:layout_margin="2dp"
+            android:background="@drawable/main_menu_button_place_of_the_day"
+            android:foreground="@drawable/foreground_selector"
+            android:stateListAnimator="@drawable/menu_button_state_animator">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                style="@style/MainMenuButtonText"
+                android:text="@string/place_of_the_day" />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/imageview_main_menu_attractions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher">
+            android:layout_margin="@dimen/menu_button_margin"
+            android:background="@drawable/main_menu_button_attractions"
+            android:foreground="@drawable/foreground_selector"
+            android:stateListAnimator="@drawable/menu_button_state_animator">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                style="@style/MainMenuButtonText"
+                android:text="@string/attractions" />
+            />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/imageview_main_menu_museums"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher">
+            android:layout_margin="@dimen/menu_button_margin"
+            android:background="@drawable/main_menu_button_museum"
+            android:foreground="@drawable/foreground_selector"
+            android:stateListAnimator="@drawable/menu_button_state_animator">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                style="@style/MainMenuButtonText"
+                android:text="@string/museums" />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/imageview_main_menu_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ic_launcher">
+            android:layout_margin="@dimen/menu_button_margin"
+            android:background="@drawable/main_menu_button_food"
+            android:foreground="@drawable/foreground_selector"
+            android:stateListAnimator="@drawable/menu_button_state_animator">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center" />
+                style="@style/MainMenuButtonText"
+                android:text="@string/food" />
+            />
         </FrameLayout>
 
     </com.example.android.tourio.SquareGridLayout>

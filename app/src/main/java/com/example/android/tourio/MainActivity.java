@@ -22,13 +22,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         /* Hide android action bar */
-        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+
+        setContentView(R.layout.activity_main);
         try {
-            getActionBar().hide();
+            getSupportActionBar().hide();
         } catch (NullPointerException npe) {
             Log.d(TAG, "ActionBar returned null pointer, continuing anyway...");
         }
-        setContentView(R.layout.activity_main);
 
         /* Setup the menu buttons */
         buttonPlaceOfTheDay = (FrameLayout) findViewById(R.id.imageview_main_menu_place_of_the_day);
