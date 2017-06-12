@@ -29,8 +29,10 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FoodActivity"
-            android:label="@string/food"
+            android:label="@string/food_and_drink"
             android:parentActivityName=".MainActivity" />
+
+        <activity android:name=".PlaceDetailsActivity" />
     </application>
 
 </manifest>

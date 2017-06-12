@@ -40,5 +40,6 @@ public class MuseumsActivity extends AppCompatActivity{
         PlaceAdapter adapter = new PlaceAdapter(this, places);
         /* Bind adapter to our ListView */
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new PlaceOnItemClickListener());
     }
 }

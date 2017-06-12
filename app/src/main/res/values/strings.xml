@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Tourio</string>
+    <string name="app_name">tourio</string>
     <string name="place_of_the_day">Place of the Day</string>
     <string name="attractions">Attractions</string>
     <string name="museums">Museums</string>
-    <string name="food">Food</string>
+    <string name="food_and_drink">Food \u0026 Drink</string>
     <string name="description_label">Description:</string>
 </resources>

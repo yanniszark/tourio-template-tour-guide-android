@@ -71,6 +71,7 @@ public class FoodDrinkFragment extends Fragment {
         PlaceAdapter adapter = new PlaceAdapter(getContext(), places);
         /* Bind adapter to our ListView */
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new PlaceOnItemClickListener());
         return view;
     }
 }
