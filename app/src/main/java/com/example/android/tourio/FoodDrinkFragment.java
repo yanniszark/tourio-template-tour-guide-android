@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -46,7 +45,7 @@ public class FoodDrinkFragment extends Fragment {
                 String placeArray[] = getResources().getStringArray(R.array.food_examples);
                 String category = getResources().getString(R.string.category_food);
                 places.add(new Place(placeArray[0], R.drawable.food_anafiotika, category, 9.5f, 9451752, "", 37.971515, 23.725735));
-                places.add(new Place(placeArray[1], R.drawable.food_falafellas,category, 9.7f, 10000000, "", 37.969291, 23.733095));
+                places.add(new Place(placeArray[1], R.drawable.food_falafellas, category, 9.7f, 10000000, "", 37.969291, 23.733095));
                 places.add(new Place(placeArray[2], R.drawable.food_kebab_thanasis, category, 7.1f, 10000000, "", 37.970679, 23.729427));
                 places.add(new Place(placeArray[3], R.drawable.food_mirch, category, 7.9f, 254196, "", 37.596143, 23.079243));
                 places.add(new Place(placeArray[4], R.drawable.food_souvlaki_savvas, category, 4.9f, 10000000, "", 37.968338, 23.741037));
@@ -54,8 +53,7 @@ public class FoodDrinkFragment extends Fragment {
                 Log.e(TAG, "Error acquiring place object.");
                 return view;
             }
-        }
-        else if (mPage == 1){
+        } else if (mPage == 1) {
             try {
                 String placeArray[] = getResources().getStringArray(R.array.drink_examples);
                 String category = getResources().getString(R.string.category_drink);

@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 public class FoodActivity extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +21,7 @@ public class FoodActivity extends AppCompatActivity {
         // Get the ViewPager and set it's PagerAdapter so that it can display items
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new FoodDrinkFragmentAdapter(getSupportFragmentManager(),
-                new String[] {"Food", "Drink"}) );
+                new String[]{"Food", "Drink"}));
 
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);

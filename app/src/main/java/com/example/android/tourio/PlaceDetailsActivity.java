@@ -5,9 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,13 +18,13 @@ import com.google.gson.Gson;
  */
 
 public class PlaceDetailsActivity extends AppCompatActivity {
+
     private static final String TAG = PlaceOfTheDayActivity.class.getSimpleName();
 
     ImageView placeImage;
     TextView placeName;
     TextView placeCategory;
     TextView placeRating;
-    TextView placeDescription;
     FloatingActionButton showLocation;
 
     @Override
@@ -45,9 +43,7 @@ public class PlaceDetailsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_of_the_day);
-        //getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         final Place place;
 
@@ -56,8 +52,7 @@ public class PlaceDetailsActivity extends AppCompatActivity {
         if (extras != null) {
             jsonMyObject = extras.getString("PLACE");
             place = new Gson().fromJson(jsonMyObject, Place.class);
-        }
-        else
+        } else
             return;
 
 
@@ -91,7 +86,6 @@ public class PlaceDetailsActivity extends AppCompatActivity {
                 double latitude = place.getPlaceLocation().getLatitude();
                 double longitude = place.getPlaceLocation().getLongitude();
                 String label = place.getPlaceLocation().getProvider();
-                ;
                 String uriBegin = "geo:" + latitude + "," + longitude;
                 String query = latitude + "," + longitude + "(" + label + ")";
                 String encodedQuery = Uri.encode(query);

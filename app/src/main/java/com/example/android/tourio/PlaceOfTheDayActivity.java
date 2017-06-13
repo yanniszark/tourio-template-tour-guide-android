@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class PlaceOfTheDayActivity extends AppCompatActivity{
+public class PlaceOfTheDayActivity extends AppCompatActivity {
 
     private static final String TAG = PlaceOfTheDayActivity.class.getSimpleName();
 
@@ -20,7 +20,6 @@ public class PlaceOfTheDayActivity extends AppCompatActivity{
     TextView placeName;
     TextView placeCategory;
     TextView placeRating;
-    TextView placeDescription;
     FloatingActionButton showLocation;
 
 
@@ -33,9 +32,8 @@ public class PlaceOfTheDayActivity extends AppCompatActivity{
         try {
             placeOfTheDay = new Place("Juicy Burger", R.drawable.place_of_the_day_juicy_burger,
                     "food", 9.8f, 56451218, "", 37.998753, 23.800050);
-        }
-        catch (Exception e){
-            Log.e(TAG , "Error acquiring placeOfTheDay object.");
+        } catch (Exception e) {
+            Log.e(TAG, "Error acquiring placeOfTheDay object.");
             return;
         }
 
@@ -67,7 +65,7 @@ public class PlaceOfTheDayActivity extends AppCompatActivity{
             public void onClick(View v) {
                 double latitude = placeOfTheDay.getPlaceLocation().getLatitude();
                 double longitude = placeOfTheDay.getPlaceLocation().getLongitude();
-                String label = placeOfTheDay.getPlaceLocation().getProvider();;
+                String label = placeOfTheDay.getPlaceLocation().getProvider();
                 String uriBegin = "geo:" + latitude + "," + longitude;
                 String query = latitude + "," + longitude + "(" + label + ")";
                 String encodedQuery = Uri.encode(query);
