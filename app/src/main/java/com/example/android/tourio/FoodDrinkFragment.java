@@ -43,11 +43,13 @@ public class FoodDrinkFragment extends Fragment {
         if (mPage == 0) {
         /* Setup List of Attractions */
             try {
-                places.add(new Place("Anafiotika Tavern", R.drawable.food_anafiotika, "food", 9.5f, 9451752, "", 37.971515, 23.725735));
-                places.add(new Place("Falafellas Falafels", R.drawable.food_falafellas, "food", 9.7f, 10000000, "", 37.969291, 23.733095));
-                places.add(new Place("Thanassis Kebab", R.drawable.food_kebab_thanasis, "food", 7.1f, 10000000, "", 37.970679, 23.729427));
-                places.add(new Place("Mirch", R.drawable.food_mirch, "food", 7.9f, 254196, "", 37.596143, 23.079243));
-                places.add(new Place("Savvas Souvlaki", R.drawable.food_souvlaki_savvas, "food", 4.9f, 10000000, "", 37.968338, 23.741037));
+                String placeArray[] = getResources().getStringArray(R.array.food_examples);
+                String category = getResources().getString(R.string.category_food);
+                places.add(new Place(placeArray[0], R.drawable.food_anafiotika, category, 9.5f, 9451752, "", 37.971515, 23.725735));
+                places.add(new Place(placeArray[1], R.drawable.food_falafellas,category, 9.7f, 10000000, "", 37.969291, 23.733095));
+                places.add(new Place(placeArray[2], R.drawable.food_kebab_thanasis, category, 7.1f, 10000000, "", 37.970679, 23.729427));
+                places.add(new Place(placeArray[3], R.drawable.food_mirch, category, 7.9f, 254196, "", 37.596143, 23.079243));
+                places.add(new Place(placeArray[4], R.drawable.food_souvlaki_savvas, category, 4.9f, 10000000, "", 37.968338, 23.741037));
             } catch (Exception e) {
                 Log.e(TAG, "Error acquiring place object.");
                 return view;
@@ -55,10 +57,12 @@ public class FoodDrinkFragment extends Fragment {
         }
         else if (mPage == 1){
             try {
-                places.add(new Place("360 Bar", R.drawable.drink_360_bar, "drink", 9.5f, 9451752, "", 37.971515, 23.725735));
-                places.add(new Place("A for Athens", R.drawable.drink_a_for_athens, "drink", 9.7f, 10000000, "", 37.969291, 23.733095));
-                places.add(new Place("Baba au Rum", R.drawable.drink_baba_au_rum, "drink", 7.1f, 10000000, "", 37.970679, 23.729427));
-                places.add(new Place("Six Dogs", R.drawable.drink_six_dogs, "drink", 7.9f, 254196, "", 37.596143, 23.079243));
+                String placeArray[] = getResources().getStringArray(R.array.drink_examples);
+                String category = getResources().getString(R.string.category_drink);
+                places.add(new Place(placeArray[0], R.drawable.drink_360_bar, category, 9.5f, 9451752, "", 37.971515, 23.725735));
+                places.add(new Place(placeArray[1], R.drawable.drink_a_for_athens, category, 9.7f, 10000000, "", 37.969291, 23.733095));
+                places.add(new Place(placeArray[2], R.drawable.drink_baba_au_rum, category, 7.1f, 10000000, "", 37.970679, 23.729427));
+                places.add(new Place(placeArray[3], R.drawable.drink_six_dogs, category, 7.9f, 254196, "", 37.596143, 23.079243));
             } catch (Exception e) {
                 Log.e(TAG, "Error acquiring place object.");
                 return view;

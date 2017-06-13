@@ -5,4 +5,41 @@
     <string name="museums">Museums</string>
     <string name="food_and_drink">Food \u0026 Drink</string>
     <string name="description_label">Description:</string>
+
+    <string name="category_food">Food</string>
+    <string name="category_drink">Drink</string>
+    <string name="category_museum">Museum</string>
+    <string name="category_attraction">Attraction</string>
+
+    <string-array name="food_examples">
+        <item>Anafiotika Tavern</item>
+        <item>Falafellas Falafels</item>
+        <item>Thanassis Kebab</item>
+        <item>Mirch</item>
+        <item>Savvas Souvlaki</item>
+    </string-array>
+
+    <string-array name="drink_examples">
+        <item>360 Bar</item>
+        <item>A for Athens</item>
+        <item>Baba au Rum</item>
+        <item>Six Dogs</item>
+    </string-array>
+
+    <string-array name="museum_examples">
+        <item>Acropolis Museum</item>
+        <item>Benaki Museum</item>
+        <item>National Archaeological Museum</item>
+        <item>War Museum</item>
+        <item>Numismatic Museum</item>
+    </string-array>
+
+    <string-array name="attraction_examples">
+        <item>Acropolis</item>
+        <item>Temple of Olympian Zeus</item>
+        <item>Plaka</item>
+        <item>Epidaurus Theater</item>
+        <item>Kallimarmaro</item>
+        <item>Lekavittos Hill Theater</item>
+    </string-array>
 </resources>

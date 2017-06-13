@@ -22,9 +22,31 @@ import static android.R.attr.rating;
 
 public class PlaceAdapter extends ArrayAdapter<Place> {
 
+    /**
+     * {@link PlaceViewHolder} implements ViewHolder design pattern to use with the PlaceAdapter in the ListView
+     * for improved performance.
+     */
+
+    class PlaceViewHolder {
+
+        private TextView placeNameTextView;
+        private ImageView placeImageView;
+        private TextView placeRatingTextView;
+        private TextView placeNumberOfVisitsTextView;
+
+        public PlaceViewHolder(@NonNull View view) {
+
+            placeNameTextView = (TextView) view.findViewById(R.id.list_item_name);
+            placeImageView = (ImageView) view.findViewById(R.id.list_item_image);
+            placeRatingTextView = (TextView) view.findViewById(R.id.list_item_rating);
+            placeNumberOfVisitsTextView = (TextView) view.findViewById(R.id.list_item_visits);
+        }
+    }
+
     public PlaceAdapter(@NonNull Context context, @NonNull List<Place> objects) {
         super(context, 0, objects);
     }
+
 
     @NonNull
     @Override
@@ -32,26 +54,28 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
 
         /* Get place at current position */
         Place currentPlace = (Place) getItem(position);
+        PlaceViewHolder viewHolder;
         /* If there is no recycled view then inflate a new one */
         if (convertView == null){
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.list_item_place, parent, false);
+            viewHolder = new PlaceViewHolder(convertView);
+            convertView.setTag(viewHolder);
         }
+        else
+            viewHolder = (PlaceViewHolder) convertView.getTag();
 
         /* Set the place's image */
-        ImageView placeImage = (ImageView) convertView.findViewById(R.id.list_item_image);
-        placeImage.setImageResource(currentPlace.getImageResourceId());
+        viewHolder.placeImageView.setImageResource(currentPlace.getImageResourceId());
 
         /* Set the place's name */
-        TextView placeName = (TextView) convertView.findViewById(R.id.list_item_name);
-        placeName.setText(currentPlace.getName());
+        viewHolder.placeNameTextView.setText(currentPlace.getName());
 
         /* Set the place's number of visits */
-        TextView placeNumberOfVisits = (TextView) convertView.findViewById(R.id.list_item_visits);
-        placeNumberOfVisits.setText(String.valueOf(currentPlace.getVisits()));
+        viewHolder.placeNumberOfVisitsTextView.setText(String.valueOf(currentPlace.getVisits()));
 
         /* Set the place's rating */
-        TextView placeRating = (TextView) convertView.findViewById(R.id.list_item_rating);
+        TextView placeRating = viewHolder.placeRatingTextView;
         Float rating = currentPlace.getRating();
         placeRating.setText(String.format("%.1f", rating));
 

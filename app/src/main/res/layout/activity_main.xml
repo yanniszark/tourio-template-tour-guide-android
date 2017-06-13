@@ -47,7 +47,7 @@
             <TextView
                 style="@style/MainMenuButtonText"
                 android:text="@string/attractions" />
-            />
+
         </FrameLayout>
 
         <FrameLayout
@@ -76,7 +76,6 @@
             <TextView
                 style="@style/MainMenuButtonText"
                 android:text="@string/food_and_drink" />
-            />
         </FrameLayout>
 
     </com.example.android.tourio.SquareGridLayout>

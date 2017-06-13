@@ -1,5 +1,6 @@
 package com.example.android.tourio;
 
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -14,6 +15,8 @@ import android.view.ViewGroup;
  * @author Tom Gibara
  *
  */
+
+/* Gist link: https://gist.github.com/tomgibara/717450 */
 
 public class SquareGridLayout extends ViewGroup {
 

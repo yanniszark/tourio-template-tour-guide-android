@@ -29,12 +29,14 @@ public class AttractionsActivity extends AppCompatActivity{
 
         /* Setup List of Attractions */
         try {
-            places.add(new Place("Acropolis", R.drawable.attraction_acropolis, "attraction", 9.4f, 9451752, "", 37.971515, 23.725735));
-            places.add(new Place("Temple of Olympian Zeus", R.drawable.attraction_temple_of_olympian_zeus, "attraction", 9.1f, 10000000, "", 37.969291, 23.733095));
-            places.add(new Place("Plaka", R.drawable.attraction_plaka, "attraction", 9.3f, 10000000, "", 37.970679, 23.729427));
-            places.add(new Place("Epidaurus Theater", R.drawable.attraction_epidaurus_theater, "attraction", 8.9f, 254196, "", 37.596143, 23.079243));
-            places.add(new Place("Kallimarmaro", R.drawable.attraction_kallimarmaro, "attraction", 7.2f, 10000000, "", 37.968338, 23.741037));
-            places.add(new Place("Lekavittos Hill Theater", R.drawable.attraction_lekavittos_hill_theater, "attraction", 8.5f, 10000000, "", 37.981849, 23.743398));
+            String placeArray[] = getResources().getStringArray(R.array.attraction_examples);
+            String category = getResources().getString(R.string.category_attraction);
+            places.add(new Place(placeArray[0], R.drawable.attraction_acropolis, category, 9.4f, 9451752, "", 37.971515, 23.725735));
+            places.add(new Place(placeArray[1], R.drawable.attraction_temple_of_olympian_zeus, category, 9.1f, 10000000, "", 37.969291, 23.733095));
+            places.add(new Place(placeArray[2], R.drawable.attraction_plaka, category, 9.3f, 10000000, "", 37.970679, 23.729427));
+            places.add(new Place(placeArray[3], R.drawable.attraction_epidaurus_theater, category, 8.9f, 254196, "", 37.596143, 23.079243));
+            places.add(new Place(placeArray[4], R.drawable.attraction_kallimarmaro, category, 7.2f, 10000000, "", 37.968338, 23.741037));
+            places.add(new Place(placeArray[5], R.drawable.attraction_lekavittos_hill_theater, category, 8.5f, 10000000, "", 37.981849, 23.743398));
         }
         catch (Exception e){
             Log.e(TAG, "Error acquiring place object.");

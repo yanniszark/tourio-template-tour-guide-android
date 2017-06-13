@@ -23,11 +23,13 @@ public class MuseumsActivity extends AppCompatActivity{
 
         /* Setup List of Attractions */
         try {
-            places.add(new Place("Acropolis Museum", R.drawable.museum_acropolis, "food", 9.5f, 45456, "", 37.971515, 23.725735));
-            places.add(new Place("Benaki Museum", R.drawable.museum_benaki, "food", 9.7f, 654544, "", 37.969291, 23.733095));
-            places.add(new Place("National Archaeological Museum", R.drawable.museum_national_archaeological, "food", 7.1f, 456456, "", 37.970679, 23.729427));
-            places.add(new Place("War Museum", R.drawable.museum_war, "food", 4.9f, 78676, "", 37.968338, 23.741037));
-            places.add(new Place("Numismatic Museum", R.drawable.museum_numismatic, "food", 7.9f, 254196, "", 37.596143, 23.079243));
+            String placeArray[] = getResources().getStringArray(R.array.museum_examples);
+            String category = getResources().getString(R.string.category_museum);
+            places.add(new Place(placeArray[0], R.drawable.museum_acropolis, category, 9.5f, 45456, "", 37.971515, 23.725735));
+            places.add(new Place(placeArray[1], R.drawable.museum_benaki, category, 9.7f, 654544, "", 37.969291, 23.733095));
+            places.add(new Place(placeArray[2], R.drawable.museum_national_archaeological, category, 7.1f, 456456, "", 37.970679, 23.729427));
+            places.add(new Place(placeArray[3], R.drawable.museum_war, category, 4.9f, 78676, "", 37.968338, 23.741037));
+            places.add(new Place(placeArray[4], R.drawable.museum_numismatic, category, 7.9f, 254196, "", 37.596143, 23.079243));
         }
         catch (Exception e){
             Log.e(TAG, "Error acquiring place object.");
